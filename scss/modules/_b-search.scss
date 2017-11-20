@@ -1,0 +1,48 @@
+.b-site-search {
+	margin: 3rem 0 0;
+
+	&__form {
+		@include full;
+		display: table;
+		border-collapse: separate;
+	}
+
+	&__field {
+		padding: $big-vertical-padding $padding;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border: none;
+		@include vs-box-shadow;
+	}
+
+	&__button-wrapper {
+		width: 1%;
+		display: table-cell;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+
+	&__button {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		padding: $big-vertical-padding ($big-vertical-padding * 4);
+		@include vs-box-shadow;
+	}
+}
+
+/********* MEDIA QUERIES *********/
+
+@media screen and (min-width: $desktop-small-breakpoint) {
+	@include with-layout($desktop-small, true) {
+		.b-site-search {
+			&__form {
+				@include full;
+			}
+		}
+	}
+}
+
+/********* MEDIA QUERIES *********/

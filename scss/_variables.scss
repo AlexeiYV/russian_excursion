@@ -1,0 +1,7 @@
+$basic-font-size: 1rem;
+$line-height: 1.5;
+$padding: 1rem;
+$vertical-padding: $padding/2;
+$big-vertical-padding: (3rem - ($basic-font-size * $line-height)) / 2;
+$page-title-padding: (5rem - (2rem * $line-height)) / 2;
+$border-radius: 3px;

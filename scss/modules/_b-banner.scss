@@ -1,0 +1,19 @@
+.b-banner {
+	display: none;
+	padding-bottom: 0;
+}
+
+
+
+/********* MEDIA QUERIES *********/
+
+@media screen and (min-width: $desktop-small-breakpoint) {
+	@include with-layout($desktop-small, true) {
+		.b-banner {
+			display: block;
+			@include span(3 last);
+		}
+	}
+}
+
+/********* MEDIA QUERIES *********/

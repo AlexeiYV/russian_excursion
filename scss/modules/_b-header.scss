@@ -1,0 +1,19 @@
+.b-header {
+	text-align: center;
+	background-color: $blue;
+	color: $white;
+	padding: 1rem 0;
+}
+
+/********* MEDIA QUERIES *********/
+
+@media screen and (min-width: $desktop-small-breakpoint) {
+	@include with-layout($desktop-small, true) {
+		.b-header {
+			overflow: hidden;
+			padding: $padding * 2;
+		}
+	}
+}
+
+/********* MEDIA QUERIES *********/

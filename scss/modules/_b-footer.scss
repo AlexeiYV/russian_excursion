@@ -1,0 +1,10 @@
+.b-footer {
+	margin-top: 2rem;
+	padding: $padding * 3 0 $padding * 4;
+	background-color: $blue;
+	color: $white;
+
+	&__heading {
+		color: $white;
+	}
+}

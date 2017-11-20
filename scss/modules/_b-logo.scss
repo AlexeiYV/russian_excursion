@@ -1,0 +1,29 @@
+.b-logo {
+	font-size: 1.5rem;
+
+	&__link:link,
+	&__link:visited,
+	&__link:hover,
+	&__link:active {
+		text-decoration: none;
+		color: $white;
+	}
+
+	&__description {
+		font-size: .75rem;
+		display: block;
+		text-align: center;
+	}
+}
+
+/********* MEDIA QUERIES *********/
+
+@media screen and (min-width: $desktop-small-breakpoint) {
+	@include with-layout($desktop-small, true) {
+		.b-logo {
+			float: left;
+		}
+	}
+}
+
+/********* MEDIA QUERIES *********/

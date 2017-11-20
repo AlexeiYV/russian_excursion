@@ -1,0 +1,20 @@
+.b-contacts {
+	float: right;
+	text-align: right;
+
+	&__cta {
+		display: block;
+	}
+
+	&__phone {
+		margin-top: $vertical-padding;
+		display: block;
+	}
+
+	&__phone:link,
+	&__phone:visited,
+	&__phone:hover,
+	&__phone:active {
+		color: $white;
+	}
+}
