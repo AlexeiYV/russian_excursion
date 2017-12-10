@@ -1,0 +1,36 @@
+// =============================================================================
+// Parent b-button settings
+// =============================================================================
+$b-button-bg: 								theme-color('secondary-color');
+$b-button-color: 							get-color('white');
+$b-button-vertical-padding: 				$vertical-padding;
+$b-button-horizontal-padding: 				$padding;
+$b-button-border-radius: 					$basic-border-radius;
+$b-button-line-height:						1.5;
+$b-button-transition: 						all .2s ease-in;
+
+$b-button-hover-bg:							get-shade-color(theme-color('secondary-color'));
+$b-button-hover-color:						get-color('white');
+
+
+
+// =============================================================================
+// b-button--3d settings
+// =============================================================================
+$b-button--3d-border-color:					get-shade-color(theme-color('secondary-color'), $color-step * 2);
+$b-button--3d-border-width:					3px;
+
+
+
+// =============================================================================
+// b-button--outline settings
+// =============================================================================
+$b-button--outline-color:					get-color('white');
+$b-button--outline-border-color:			get-shade-color(theme-color('secondary-color'));
+$b-button--outline-border-width:			2px;
+
+
+
+$b-button--outline-hover-bg:				get-color('white');
+$b-button--outline-hover-border-color:		get-color('white');
+$b-button--outline-hover-color:				theme-color('primary-color');

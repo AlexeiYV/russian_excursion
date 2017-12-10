@@ -1,0 +1,13 @@
+include /modules/b-post-meta/b-post-meta
+
+mixin b-post(thumbnail, heading, text, show_meta, button_link) 
+	include template
+
+mixin b-post--slider(thumbnail, heading, text, show_meta)
+	include template-slider
+
+mixin b-post--excursion(thumbnail, heading, text, show_meta)
+	include template-excursion
+
+mixin b-post--single(thumbnail, heading, text, show_meta)
+	include template-single

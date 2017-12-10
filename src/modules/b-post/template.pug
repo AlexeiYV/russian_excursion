@@ -1,0 +1,17 @@
+div.b-post(class!=attributes.class)
+	block thumbnail
+		if thumbnail
+			div.b-post__thumbnail
+				img.b-post__thumbnail-img(src=thumbnail)
+	block heading
+		if heading
+			div.b-post__heading= heading 
+	block text
+		if text
+			div.b-post__excerpt= text 
+
+	if show_meta
+		block meta
+			+b-post__meta
+
+	block gallery

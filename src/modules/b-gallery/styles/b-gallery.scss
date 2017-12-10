@@ -1,0 +1,8 @@
+@import 'options';
+
+.b-gallery  {
+	margin-top: $padding;
+	@include l-clearfix;
+}
+
+@import 'mediaqueries';

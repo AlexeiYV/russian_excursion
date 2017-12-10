@@ -1,0 +1,76 @@
+.l-container {
+	@include container;
+	box-sizing: content-box;
+	padding: 0 $l-container-padding;
+}
+
+.b-header {
+	padding: $padding;
+	@include l-clearfix;
+	text-align: left;
+	background-color: $blue;
+	color: $white;
+}
+
+.b-contacts {
+	margin-top: $padding;
+	@include l-clearfix;
+
+	&__cta {
+		margin-right: $padding;
+		display: inline-block;
+	}
+
+	&__phone {
+		display: block;
+		vertical-align: middle;
+		margin-top: $padding;
+	}
+
+	&__phone:link,
+	&__phone:visited,
+	&__phone:hover,
+	&__phone:active {
+		color: $white;
+	}
+}
+
+.b-main-content {
+	margin-top: 3rem;
+}
+
+.b-banner {
+	display: none;
+	padding-bottom: 0;
+}
+
+.b-footer {
+	margin-top: 2rem;
+	padding: $padding * 3 0 $padding * 4;
+	background-color: $blue;
+	color: $white;
+
+	&__heading {
+		color: $white;
+	}
+}
+
+.b-post {
+
+	&--excursion {
+		.b-post__meta .b-button {
+			display: table;
+			margin-top: $padding;
+		}
+	}
+
+	&--single {
+		.b-post__meta {
+			margin-top: $padding;
+		}
+	}
+}
+
+.b-sidebar {
+	margin-bottom: $padding;
+}

@@ -1,0 +1,27 @@
+extends /layouts/main
+
+block mixins
+	include /modules/b-section/b-section
+	include /modules/b-post/b-post
+	include /modules/b-post-gallery/b-post-gallery
+
+block variables
+	- var title = "Экскурсии в Америку на русском языке";
+	- var heading = "Сервис по подбору экскурсий в США на русском языке";
+
+block pre-content
+	include /modules/b-page-heading/b-page-heading
+	include /modules/b-site-search/b-site-search	
+
+block main-content
+	+b-section
+		+b-post--slider('img/b-city__thumbnail.png', 'Сакраменто', 'Город на западе США на месте впадения реки Американ-Ривер в реку Сакраменто, столица штата Калифорния и округа Сакраменто, основан в декабре 1848 года Джоном Саттером-младшим — сыном иммигранта из Швейцарии, который основал первое белое поселение в этом регионе.', true)(class="b-post--promo")
+		+b-post('img/b-banner.png')(class="b-banner")
+	+b-section
+		+b-post-gallery
+
+	
+	
+
+
+	

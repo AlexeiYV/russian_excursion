@@ -1,0 +1,70 @@
+@include with-layout($desktop-small, true) {
+	.l-container {
+		@include container;
+	}
+
+	.b-banner {
+		display: block;
+		@include span(3 last);
+	}
+
+	.b-header {
+		@include l-clearfix;
+		padding: $padding * 2;
+	}
+
+	.b-logo {
+		float: left;
+	}
+
+	.b-contacts {
+		display: inline-block;
+		float: right;
+		text-align: right;
+
+		&__cta {
+			display: block;
+			margin-right: 0;
+		}
+
+		&__phone {
+			margin-top: $vertical-padding;
+			display: block;
+		}
+	}
+
+	.b-post {
+		&--promo {
+			margin-left: 0;
+			@include span(9);
+		
+			.b-post__links {
+				float: left;
+				margin: $vertical-padding 0 0;
+			}
+
+			.b-post__links-item {
+				display: inline;
+				margin-right: 1rem;
+			}
+
+			.b-post__meta {
+				overflow: hidden;
+			}
+
+			.b-button {
+				float: right;
+				margin: 0;
+			}
+		}
+	}
+
+	.b-sidebar {
+		@include span(3);
+		margin-bottom: 0;
+	}
+
+	.b-content {
+		@include span(9 last);
+	}
+}

@@ -1,0 +1,13 @@
+extends template
+include /modules/b-button/b-button
+block heading
+
+block text
+		if text
+			div.b-post__excerpt= text 
+block meta
+	.b-post__meta
+		+b-button('Заказать экскурсию', '#js-make-order-modal')(class="b-button--3d modal-trigger")
+
+block gallery
+	+b-gallery

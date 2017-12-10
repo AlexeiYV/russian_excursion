@@ -1,0 +1,23 @@
+@import 'options';
+
+.b-logo {
+	font-size: $b-logo-font-size;
+	display: inline-block;
+	vertical-align: middle;
+
+	&__link:link,
+	&__link:visited,
+	&__link:hover,
+	&__link:active {
+		text-decoration: $basic-text-decoration;
+		color: $b-logo-color;
+	}
+
+	&__description {
+		font-size: $b-logo__description-font-size;
+		display: block;
+		text-align: center;
+	}
+}
+
+@import 'mediaqueries';

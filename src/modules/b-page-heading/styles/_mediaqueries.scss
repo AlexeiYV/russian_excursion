@@ -1,0 +1,9 @@
+@media screen and (min-width: $desktop-small-breakpoint) {
+	@include with-layout($desktop-small, true) {
+		.b-page-heading {
+			&__h1 {
+				@include full;
+			}
+		}
+	}
+}

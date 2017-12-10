@@ -1,0 +1,35 @@
+* {
+	box-sizing: border-box;
+}
+
+$susy: (
+	columns: 4,
+	gutters: 1/4,
+	gutter-position: split
+);
+
+$breakpoints: (
+	'mobile-small': 	0em,
+	'mobile-large': 	36em,
+	'tablet': 			48em,
+	'desktop-small': 	62em,
+	'desktop-large': 	75em
+);
+
+$layouts: (
+	'mobile-small': 8 1/4 after border-box,
+	'mobile-large': 8 1/4 after border-box,
+	'tablet': 8 1/4 after border-box,
+	'desktop-small': 980px 12,
+	'desktop-large': ''
+);
+
+$mobile-breakpoint: 36em;
+$tablet-breakpoint: 48em;
+$desktop-small-breakpoint: 62em;
+$desktop-large-breakpoint: 75em;
+
+$desktop-small: (
+	container: 980px,
+	columns: 12
+);

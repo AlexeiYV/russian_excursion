@@ -1,0 +1,13 @@
+.b-post-gallery {
+	.b-post {
+		@each $breakpoint, $num in $b-post-gallery-posts-in-row {
+			@if($num > 1) {
+				@include with-layout(get-layout($breakpoint), true) {
+					@include respond($breakpoint) {
+						@include gallery(susy-get(columns) / $num);
+					}
+				}
+			}
+		}	
+	}
+}

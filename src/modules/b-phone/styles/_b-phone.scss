@@ -1,0 +1,9 @@
+.b-phone {
+	color: $b-phone-color;
+	text-decoration: $b-phone-text-decoration;
+
+	&:hover {
+		color: $b-phone-hover-color;
+		text-decoration: $b-phone-hover-decoration;
+	}
+}

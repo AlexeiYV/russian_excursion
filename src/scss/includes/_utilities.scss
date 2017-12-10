@@ -1,0 +1,163 @@
+// =============================================================================
+// Visuals
+// =============================================================================
+
+@mixin vs-box-shadow {
+	box-shadow: $box-shadow-size $box-shadow-color;
+}
+
+@mixin l-clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin to-left {
+	float: left;
+}
+
+@mixin to-right {
+	float: right;
+}
+
+
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+
+
+// =============================================================================
+// Get theme color
+// =============================================================================
+@function theme-color($key: "primary-color") {
+	@return map-get($theme-colors, $key);
+}
+
+// =============================================================================
+// Get color by name
+// =============================================================================
+@function get-color($key: 'blue') {
+	@return map-get($colors, $key);
+}
+
+// =============================================================================
+// Get darker color
+// =============================================================================
+@function get-shade-color($color, $color-step: $color-step) {
+	@return darken($color, $color-step);
+}
+
+// =============================================================================
+// Calculate padding from overal block height
+// =============================================================================
+@function get-padding-height($block-height: 5rem, $block-font-size: $basic-font-size, $block-line-height: $basic-line-height) {
+	$block-vertical-padding: ($block-height - ($block-font-size * $block-line-height)) / 2;
+	@return $block-vertical-padding;
+}
+
+// =============================================================================
+// Set horizontal position of element with margin
+// =============================================================================
+@mixin l-margin-hr-position($position: 'center') {
+	@if $position == 'center' {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@else if $position == 'left' {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	@else if $position == 'right' {
+		margin-left: auto;
+		margin-right: 0;
+	}
+}
+
+
+// =============================================================================
+// Get breakpoint from map
+// =============================================================================
+@function get-breakpoint($breakpoint, $map: $breakpoints) {
+	@return map-get($map, $breakpoint);
+}
+
+// =============================================================================
+// Get layout from map
+// =============================================================================
+@function get-layout($layout, $map: $layouts) {
+	@return map-get($map, $layout);
+}
+
+// =============================================================================
+// Mediaquery mixin
+// =============================================================================
+@mixin respond($breakpoint-from-name, $breakpoint-to-name: '', $breakpoints: $breakpoints) {
+	@if(get-breakpoint($breakpoint-from-name) == 0 and not get-breakpoint($breakpoint-to-name)) {
+		@content;
+	}
+	
+	@else if (get-breakpoint($breakpoint-from-name) != 0 and not get-breakpoint($breakpoint-to-name) ) {
+		@media screen and (min-width: get-breakpoint($breakpoint-from-name)) {
+			@content;		
+		}
+	}
+
+	@else if (get-breakpoint($breakpoint-from-name) == 0 and get-breakpoint($breakpoint-to-name) ) {
+		@media screen and (max-width: get-breakpoint($breakpoint-from-name)) {
+			@content;		
+		}
+	}
+
+	@else if (get-breakpoint($breakpoint-from-name) != 0 and get-breakpoint($breakpoint-to-name) ) {
+		@media screen and (min-width: get-breakpoint($breakpoint-from-name)) and (max-width: get-breakpoint($breakpoint-to-name)) {
+			@content;		
+		}
+	}
+}

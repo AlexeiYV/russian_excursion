@@ -19,12 +19,26 @@
   "homepage": "https://github.com/AlexeiYV/russian_excursion#readme",
   "devDependencies": {
     "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "font-awesome": "^4.7.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "merge-stream": "^1.0.1",
+    "normalize-scss": "^7.0.0",
+    "stream-combiner2": "^1.1.1",
     "susy": "^2.2.12"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "@fancyapps/fancybox": "^3.2.5",
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.8.1"
   }
 }

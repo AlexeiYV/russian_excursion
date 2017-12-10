@@ -1,0 +1,16 @@
+block variables
+block mixins
+doctype html
+html
+	include partials/head
+	body
+		include partials/header
+		
+		block pre-content
+		
+		div.b-main-content
+			block main-content
+		
+		include partials/footer
+		
+		include partials/scripts

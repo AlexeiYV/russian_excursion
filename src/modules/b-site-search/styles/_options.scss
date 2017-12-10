@@ -1,0 +1,10 @@
+$b-site-search-margin: ($padding * 3) 0 0;
+
+$b-site-search__field-padding: get-padding-height(3rem) $padding;
+$b-site-search__field-line-height: 1.5;
+
+$b-site-search__button-hr-padding: (
+	'mobile-small': $padding * 2,
+	'tablet': $padding * 4
+);
+$b-site-search__button-vr-padding: get-padding-height(3rem);

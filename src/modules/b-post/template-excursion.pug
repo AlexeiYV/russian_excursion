@@ -1,0 +1,8 @@
+extends template
+include /modules/b-button/b-button
+block meta
+	.b-post__meta
+		span Продолжительность экскурсии: 
+			b 2-3 часа
+		+b-button('Заказать экскурсию', '#js-make-order-modal')(class="b-button--3d modal-trigger")
+	

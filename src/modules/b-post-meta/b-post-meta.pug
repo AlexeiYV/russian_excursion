@@ -1,0 +1,10 @@
+include /modules/b-button/b-button
+include data
+
+mixin b-post__meta
+	div.b-post__meta
+		ul.b-post__links
+			each link in meta_links
+				li.b-post__links-item
+					a.b-post__links-link(href=link.href)= link.text
+		+b-button('Заказать экскурсию')(class="b-button--3d b-post__button")

@@ -1,0 +1,31 @@
+@import 'options';
+
+.b-sidebar-item__section {
+	&-heading {
+		padding: $padding;
+		border-top: 1px solid get-color('grey-middle');
+		border-bottom: 1px solid get-color('grey-middle');		
+		position: relative;
+
+		&-toggler {
+			position: absolute;
+			right: $padding;
+			top: $padding * 1.5;
+			transform: translateY(-50%);
+			cursor: pointer;
+			color: theme-color('secondary-color');
+		}
+	}
+
+	&:first-child {
+		.b-sidebar-item__section-heading {
+			border-top: none;
+		}
+	}
+
+	&-content {
+		padding: $padding;
+	}
+}
+
+@import 'mediaqueries';

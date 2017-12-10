@@ -1,0 +1,25 @@
+// =============================================================================
+// Parent b-post general options
+// =============================================================================
+$b-post-border-radius: $basic-border-radius;
+$b-post-bg: 		get-color('white');
+$b-post-padding: 	0 $padding $padding;
+$b-post-enable-shadow: 	true;
+
+$b-post__thubmnail-margin: 0 ($padding * -1);
+
+$b-post__heading-font-weight: bold;
+$b-post__heading-text-transform: uppercase;
+$b-post__heading-margin: $padding 0 0;
+
+$b-post__excerpt-margin: $padding 0 0;
+
+$b-post__links-padding: 0;
+$b-post__links-margin: $padding 0 0;
+$b-post__links-line-height: 1.2;
+$b-post__links-item-margin: $vertical-padding 0 0;
+
+$b-post__button-margin-top: $padding;
+$b-post__button-alignment: 'left';
+
+$b-post__meta-margin: $vertical-padding 0 0;

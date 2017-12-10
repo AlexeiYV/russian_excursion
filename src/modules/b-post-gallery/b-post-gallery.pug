@@ -1,0 +1,5 @@
+include data
+mixin b-post-gallery
+	div.b-post-gallery
+		each post in posts
+			+b-post(post.thumbnail, post.heading, false, post.show_meta)

@@ -1,0 +1,14 @@
+include /modules/b-form/b-form
+include /modules/b-form/b-form__field
+mixin b-modal(id)
+	div.b-modal(id!=id)
+		div.b-modal__overlay
+		div.b-modal__container
+			a.b-modal__close(href="#")
+				i.fa.fa-times
+			div.b-modal__title Отправить заявку
+			+b-form('index', 'get')
+				+b-form__field(type="text", placeholder="Ваше имя")
+				+b-form__field(type="email" placeholder="Ваш имейл" class="b-form__field")
+				+b-form__field(type="text" placeholder="Ваш телефон" class="b-form__field")
+				+b-button('Отправить')(class="b-button--3d b-modal__button")

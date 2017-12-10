@@ -1,0 +1,17 @@
+@import 'options';
+
+.b-page-heading {
+	background-color: $b-page-heading-bg;
+	font-size: $b-page-heading-font-size;
+	padding: $b-page-heading-vertical-padding 0;
+
+	@if $b-page-heading-enable-shadow {
+		@include vs-box-shadow;
+	}
+
+	&__h1 {
+		@include full;
+	}
+}
+
+@import 'mediaqueries';

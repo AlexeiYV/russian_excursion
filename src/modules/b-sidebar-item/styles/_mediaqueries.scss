@@ -1,0 +1,37 @@
+.b-sidebar-item {
+	@include respond('desktop-small') {
+		margin-top: $padding * 1.5;
+
+			&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__section + &__section {
+		margin-top: 0;
+	}
+
+	&__section {
+		margin-top: $padding / 2;
+
+		@include respond('desktop-small') {
+			margin-top: 0;
+		}
+
+		&-heading {
+			&-toggler {
+				@include respond('desktop-small') {
+					display: none;
+				}
+			}
+		}
+	
+		&-content {
+			display: none;
+
+			@include respond('desktop-small') {
+				display: block;
+			}
+		}
+	}
+}

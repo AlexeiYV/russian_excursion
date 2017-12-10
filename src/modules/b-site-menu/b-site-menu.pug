@@ -1,0 +1,12 @@
+include data
+mixin b-site-menu
+	div.b-site-menu
+		ul.b-site-menu__list
+			each link in links
+				li.b-site-menu__list-item(class= link.children ? 'has-children' : '')
+					a.b-site-menu__link(href=link.url)= link.text
+					if link.children
+						ul.b-site-menu__submenu
+							each s_link in link.children
+								li.b-site-menu__list-item
+									a.b-site-menu__link(href=s_link.url)= s_link.text

@@ -1,0 +1,9 @@
+.b-site-search {
+	@each $breakpoint, $padding-val in $b-site-search__button-hr-padding {
+		@include respond($breakpoint) {
+			&__button {
+				padding: $b-site-search__button-vr-padding $padding-val;
+			}
+		}
+	}
+}

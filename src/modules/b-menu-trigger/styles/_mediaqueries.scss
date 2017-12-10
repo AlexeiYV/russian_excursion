@@ -1,0 +1,7 @@
+@media screen and (min-width: $desktop-small-breakpoint) {
+	@include with-layout($desktop-small, true) {
+		.b-menu-trigger {
+			display: none;
+		}
+	}
+}

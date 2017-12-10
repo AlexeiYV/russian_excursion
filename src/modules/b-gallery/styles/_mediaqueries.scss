@@ -1,0 +1,18 @@
+.b-gallery {
+	&__item {
+		@include gallery(2 after);
+		margin-top: $padding / 2;
+
+		@include respond('tablet') {
+			@include with-layout(get-layout('tablet')) {
+				@include gallery(3 of 9 after);
+			}
+		}
+
+		@include respond('desktop-small') {
+			@include with-layout(get-layout('desktop-small')) {
+				@include gallery(4 after);
+			}
+		}
+	}
+}

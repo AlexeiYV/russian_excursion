@@ -1,0 +1,25 @@
+$b-site-menu-bg: get-color('blue');
+$b-site-menu-font-size: $basic-font-size;
+$b-site-menu-transition: all .5s ease-in-out;
+
+$b-site-menu__list-padding: 0;
+
+$b-site-menu__list-item-padding: $padding/2 0;
+
+$b-site-menu__link-text-transform: uppercase;
+$b-site-menu__link-font-weight: normal;
+$b-site-menu__link-color: get-color('white');
+$b-site-menu__link-decoration: none;
+$b-site-menu__link-hover-decoration: underline;
+$b-site-menu__link-hover-color: get-color('white');
+
+$b-site-menu__submenu-margin: $padding/2 0 0;
+$b-site-menu__submenu-bg: get-color('white');
+
+$b-site-menu__submenu-link-color: theme-color('primary-color');
+$b-site-menu__submenu-link-padding: $padding;
+
+$b-site-menu__submenu-item-border: 1px solid get-color('grey');
+$b-site-menu__submenu-item-hover-bg: theme-color('secondary-color');
+$b-site-menu__submenu-item-hover-color: get-color('white');
+$b-site-menu__submenu-item-hover-decoration: none;

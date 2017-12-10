@@ -1,0 +1,56 @@
+@import 'options';
+
+.b-post {
+	border-radius: $b-post-border-radius;
+	overflow: hidden;
+	background-color: $b-post-bg;
+	padding: $b-post-padding;
+	@include vs-box-shadow;
+
+	&__thumbnail {
+		margin: $b-post__thubmnail-margin;
+	}
+
+	&__thumbnail-img {
+		display: block;
+	}
+
+	&__heading {
+		font-weight: $b-post__heading-font-weight;
+		text-transform: $b-post__heading-text-transform;
+		margin: $b-post__heading-margin;
+	}
+
+	&__excerpt {
+		margin: $b-post__excerpt-margin;
+	}
+
+	&__links {
+		padding: $b-post__links-padding;
+		margin: $b-post__links-margin;
+	}
+
+	&__links-link {
+		line-height: $b-post__links-line-height;
+	}
+
+	&__links-item {
+		list-style: none;
+		margin: $b-post__links-item-margin;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__button {
+		margin-top: $b-post__button-margin-top; 
+		@include l-margin-hr-position($b-post__button-alignment);
+	}
+
+	&__meta {
+		margin: $b-post__meta-margin;
+	}
+}
+
+@import 'mediaqueries';

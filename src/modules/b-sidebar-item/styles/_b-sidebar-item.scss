@@ -1,0 +1,15 @@
+.b-sidebar-item {
+	@include vs-box-shadow;
+	background: get-color('white');
+	border-radius: $basic-border-radius;
+
+	.b-form {
+	}
+
+	.b-form__field {
+		padding: get-padding-height(2rem, $block-line-height: 1);
+		line-height: 1;
+		background: get-color('grey');
+		border: $basic-border-width solid get-color('grey-middle');
+	}
+}

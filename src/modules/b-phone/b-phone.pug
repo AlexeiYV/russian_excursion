@@ -1,0 +1,7 @@
+mixin b-phone(phone_number)
+	a.b-phone(
+		href = '#'
+		class != attributes.class
+	)
+		i.fa.fa-phone &nbsp;
+		span= phone_number

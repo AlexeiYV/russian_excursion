@@ -1,0 +1,8 @@
+@import 'options';
+.b-post-gallery {
+	@include l-clearfix;
+	.b-post {
+		margin-top: $b-post-gallery-post-margin;
+	}
+}
+@import 'mediaqueries';

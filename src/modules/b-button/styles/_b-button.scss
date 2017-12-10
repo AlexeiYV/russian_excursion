@@ -1,0 +1,54 @@
+@import 'options';
+
+.b-button {
+	vertical-align: middle;
+	display: inline-block;
+	padding: $b-button-vertical-padding;
+	line-height: $b-button-line-height;
+	border: 2px solid $b-button-bg;
+	background-color: $b-button-bg;
+	border-radius: $b-button-border-radius;
+	color: $b-button-color;
+	cursor: pointer;
+	transition: $b-button-transition;
+	text-decoration: none;
+
+
+
+	&:hover {
+		background-color: $b-button-hover-bg;
+		border-color: $b-button-hover-bg;
+		text-decoration: none;
+		color: $b-button-hover-color;
+	}
+
+	&--3d {
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+		border: none;
+
+		&:after {
+			content: "";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: $b-button--3d-border-width;
+			background-color: $b-button--3d-border-color;
+		}
+	}
+
+	&--outline {
+		background-color: transparent;
+		color: $b-button--outline-color;
+		text-transform: uppercase;
+		border: $b-button--outline-border-width solid $b-button--outline-border-color;
+
+		&:hover {
+			background-color: $b-button--outline-hover-bg;
+			border-color: $b-button--outline-hover-border-color;
+			color: $b-button--outline-border-color;
+		}
+	}
+}

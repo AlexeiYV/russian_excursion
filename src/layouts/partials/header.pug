@@ -1,0 +1,19 @@
+include /modules/b-button/b-button
+include /modules/b-phone/b-phone
+include /modules/b-logo/b-logo
+include /modules/b-site-menu/b-site-menu
+include /modules/b-menu-trigger/b-menu-trigger
+include /modules/b-modal/b-modal
+
+div.b-header
+	+b-logo('Russian Tour Amerika', 'Экскурсии в США на русском языке')(href="/")
+
+	+b-menu-trigger()(class="js-site-menu-trigger")
+	
+	.b-contacts
+		+b-button('Заказать экскурсию', '#js-make-order-modal')(class="b-button--outline b-contacts__cta modal-trigger")
+		+b-phone('+1424 333 8387')(class="b-contacts__phone")
+	
+	+b-site-menu
+
+	+b-modal('js-make-order-modal')

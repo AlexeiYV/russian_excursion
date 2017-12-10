@@ -1,0 +1,39 @@
+@import 'options';
+
+.b-modal {
+	display: none;
+	z-index: 2500;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(theme-color('primary-color'), .4);
+	color: get-color('black');
+	
+	&__container {
+		position: relative;
+		width: auto;
+		padding: $padding * 2;
+		background: get-color('white');
+		border-radius: $basic-border-radius;
+		@include vs-box-shadow;
+		z-index: 3000;
+		margin: ($padding * 3) $padding;
+		max-width: 400px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		margin-bottom: $padding * 2;
+		color: $body-color;
+	}
+
+	&__close {
+		float: right;
+	}
+}
+
+@import 'mediaqueries';

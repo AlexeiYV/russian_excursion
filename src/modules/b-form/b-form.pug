@@ -1,0 +1,4 @@
+mixin b-form(action="/", method="post")
+	form.b-form(action!=action, method!=method, class!= attributes.class)
+		if block
+			block

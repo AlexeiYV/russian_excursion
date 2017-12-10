@@ -1,0 +1,9 @@
+.b-post-listing {
+	.b-post {
+		margin-top: $padding;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

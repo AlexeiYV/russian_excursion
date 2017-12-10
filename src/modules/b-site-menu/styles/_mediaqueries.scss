@@ -1,0 +1,60 @@
+@include respond('desktop-small') {
+	@include with-layout($desktop-small, true) {
+		.b-site-menu {
+			display: block;
+			margin: 0 auto;
+			text-align: center;
+
+			&__list-item {
+				display: inline-block;
+				padding: 0;
+				margin-right: 1rem;
+
+				&.has-children {
+					margin-bottom: $padding;
+				}
+			}
+
+			&__link {
+				padding: $vertical-padding 0;
+				display: block;
+			}
+		
+			&__submenu {
+				margin: 0;
+				background: $b-site-menu__submenu-bg;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				@include vs-box-shadow;
+				z-index: 1000;
+				border-radius: $basic-border-radius;
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+
+				.b-site-menu__list-item {
+					border-top: $b-site-menu__submenu-item-border;
+					margin-right: 0;
+
+					&:first-child {
+						border-top: none;
+					}
+
+					&:hover {
+						background: $b-site-menu__submenu-item-hover-bg;
+
+						.b-site-menu__link {
+							color: $b-site-menu__submenu-item-hover-color !important;
+							text-decoration: $b-site-menu__submenu-item-hover-decoration;
+						}
+					}
+
+					.b-site-menu__link {
+						color: $b-site-menu__submenu-link-color;
+						padding: $padding;
+					}
+				}
+			}
+		}
+	}
+}

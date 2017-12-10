@@ -1,0 +1,39 @@
+@import 'options';
+
+.b-site-search {
+	margin: $b-site-search-margin;
+
+	.b-form {
+		width: 100%;
+		display: table;
+		border-collapse: separate;
+	}
+
+	.b-form__field {
+		margin: 0;
+		padding: $b-site-search__field-padding;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+		border: none;
+		line-height: $b-site-search__field-line-height;
+		@include vs-box-shadow;
+	}
+
+	&__button-wrapper {
+		width: 1%;
+		display: table-cell;
+		white-space: nowrap;
+		vertical-align: middle;
+	}
+
+	&__button {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		@include vs-box-shadow;
+	}
+}
+
+@import 'mediaqueries';

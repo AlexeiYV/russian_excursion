@@ -1,0 +1,10 @@
+// =============================================================================
+// Responsive options
+// =============================================================================
+$b-post-gallery-post-margin: $padding * 2;
+$b-post-gallery-posts-in-row: (
+	'mobile-small': 1,
+	'mobile-large': 2,
+	'tablet': 2,
+	'desktop-small': 4
+);

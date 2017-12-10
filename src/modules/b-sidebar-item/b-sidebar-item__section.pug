@@ -1,0 +1,9 @@
+mixin b-sidebar-item__section(heading = '')
+	.b-sidebar-item__section
+		if heading 
+			.b-sidebar-item__section-heading= heading
+				.b-sidebar-item__section-heading-toggler
+					i.fa.fa-chevron-down
+		if block
+			.b-sidebar-item__section-content
+				block

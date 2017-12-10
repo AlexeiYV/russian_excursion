@@ -1,0 +1,10 @@
+mixin b-logo(site_title, site_description)
+	div.b-logo
+		if block
+			block
+		else
+			a.b-logo__link(
+				href != attributes.href
+			)= site_title
+				br
+				span.b-logo__description= site_description

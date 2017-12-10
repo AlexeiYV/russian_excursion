@@ -1,0 +1,32 @@
+extends /layouts/main
+
+block mixins
+	include /modules/b-section/b-section
+	include /modules/b-post/b-post
+	include /modules/b-post-gallery/b-post-gallery
+	include /modules/b-post-listing/b-post-listing
+	include /modules/b-sidebar-item/b-sidebar-item
+	include /modules/b-sidebar-item/b-sidebar-item__section
+	include /modules/b-list/b-list
+	include /modules/b-list/b-list__item
+	include /modules/b-breadcrumbs/b-breadcrumbs
+	include /modules/b-gallery/b-gallery
+
+block variables
+	- var title = "Экскурсии в Америку на русском языке";
+	- var heading = "Сервис по подбору экскурсий в США на русском языке";
+
+block pre-content
+	+b-breadcrumbs
+	include /modules/b-page-heading/b-page-heading
+
+
+block main-content
+	+b-section
+		+b-post--single('img/b-excursion.png', 'Ознакомительная экскурсия', 'Благодаря активной добыче золота, Сакраменто в 19 веке стал развиваться стремительными темпами: была проложена первая железнодорожная транспортная магистраль на североамериканском континенте, что способствовало еще более активному развитию всех промышленно-экономических сфер города. В середине 20 века Сакраменто превратился в один из самых влиятельных промышленных центров Калифорнии со своим собственным железнодорожным вокзалом, внутренним и международным аэропортами, рукотворным каналом и огромным портом. В окрестностях Сакраменто находится одна из самых крупных баз дислокации военно-воздушных сил США.', true).b-post--single
+
+	
+	
+
+
+	

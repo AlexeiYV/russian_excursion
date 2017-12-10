@@ -1,0 +1,13 @@
+.b-form {
+	&__field {
+		background-image: none;
+		width: 100%;
+		margin-bottom: $padding;
+		padding: $vertical-padding $padding;
+		line-height: 1.5;
+		border: $basic-border-width solid $input-border-color;
+		border-radius: $basic-border-radius;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
